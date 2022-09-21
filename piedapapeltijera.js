@@ -18,28 +18,42 @@ function eleccionJuego(jugada) {
 
 // Piedra es 1, Papel es 2, Tijera es 3
 let player = 0;
-let pc = aleatorio(1,3);
-let PIEDRA = 1;
-let PAPEL = 2;
-let TIJERA = 3;
+let pc = 0; 
+let triunfos = 0;
+let perdidas = 0;
 
 jugador1 = prompt("Cuál es tu nombre?")
 alert("Bienvenido " + jugador1);
 
-player = prompt(jugador1 + " elige: \n 1. Piedra \n 2. Papel \n 3. Tijera");
+let PIEDRA = 1;
+let PAPEL = 2;
+let TIJERA = 3;
 
-alert(jugador1 + " eligió " + eleccionJuego(player));
-alert("Máquina eligió " + eleccionJuego(pc));
+while(triunfos < 3 && perdidas < 3 ) {
 
-if (player == pc) {
-    alert("Hubo un empate");
-} else if(player == PIEDRA && pc == TIJERA) {
-    alert("El ganador es " + jugador1);
-    console.log("El ganador es " + jugador1);
-} else if (player == PAPEL && pc == PIEDRA) {
-    alert("El ganador es " + jugador1);
-} else if (player == TIJERA && pc == PAPEL) {
-    alert("El ganador es " + jugador1);
-} else {
-    alert("El ganador es la Máquina");
+    pc = aleatorio(1,3);  
+    player = prompt(jugador1 + " elige: \n 1. Piedra \n 2. Papel \n 3. Tijera");
+    
+    alert(jugador1 + " eligió " + eleccionJuego(player));
+    alert("Máquina eligió " + eleccionJuego(pc));
+    
+    if (player == pc) {
+        alert("Hubo un empate");
+    } else if(player == PIEDRA && pc == TIJERA) {
+        alert("El ganador es " + jugador1);
+        triunfos = triunfos + 1;
+    } else if (player == PAPEL && pc == PIEDRA) {
+        alert("El ganador es " + jugador1);
+        triunfos = triunfos + 1;
+    } else if (player == TIJERA && pc == PAPEL) {
+        alert("El ganador es " + jugador1);
+        triunfos = triunfos + 1;
+    } else {
+        perdidas = perdidas + 1;
+        alert("El ganador es la Máquina");
+    }
+
+    alert("Resultado parcial: " + triunfos + " triunfos y " + perdidas + " perdidas.")
 }
+
+alert(jugador1 + ": \n Ganaste " + triunfos + " veces  \n Perdiste " + perdidas + " veces");
