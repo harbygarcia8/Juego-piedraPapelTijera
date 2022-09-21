@@ -39,17 +39,11 @@ while(triunfos < 3 && perdidas < 3 ) {
     
     if (player == pc) {
         alert("Hubo un empate");
-    } else if(player == PIEDRA && pc == TIJERA) {
+    } else if(player == PIEDRA && pc == TIJERA || player == PAPEL && pc == PIEDRA  || player == TIJERA && pc == PAPEL) {
         alert("El ganador es " + jugador1);
-        triunfos = triunfos + 1;
-    } else if (player == PAPEL && pc == PIEDRA) {
-        alert("El ganador es " + jugador1);
-        triunfos = triunfos + 1;
-    } else if (player == TIJERA && pc == PAPEL) {
-        alert("El ganador es " + jugador1);
-        triunfos = triunfos + 1;
+        triunfos++;
     } else {
-        perdidas = perdidas + 1;
+        perdidas++
         alert("El ganador es la Máquina");
     }
 
