@@ -31,9 +31,9 @@ let TIJERA = 3;
 
 while(triunfos < 3 && perdidas < 3 ) {
     pc = aleatorio(1,3);  
-    player = prompt(jugador1 + " elige: \n 1. Piedra \n 2. Papel \n 3. Tijera");    
+    player = prompt(jugador1 + " elige: \n 1. Piedra \n 2. Papel \n 3. Tijera");
     alert(jugador1 + " eligió " + eleccionJuego(player));
-    alert("Máquina eligió " + eleccionJuego(pc));    
+    alert("Máquina eligió " + eleccionJuego(pc));
     if (player == pc) {
         alert("Hubo un empate");
     } else if(player == PIEDRA && pc == TIJERA || player == PAPEL && pc == PIEDRA  || player == TIJERA && pc == PAPEL) {
