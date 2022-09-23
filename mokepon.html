@@ -8,44 +8,44 @@
     <script src="js/mokepon.js"></script>
 </head>
 <body>
-    <h1>MOKEPON! </h1>
-
+    <header>
+        <h1><center>MOKEPON! </center></h1>
+    </header>
     <section id="seleccionarMascota">
         <h2>Elige tu mascota:</h2>
 
-        <label for="hipodoge">Hipodoge</label>
+        <div>
         <input type="radio" name="mascota" id="hipodoge"/>
-
-        <label for="capipepo">Capipepo</label>
-        <input type="radio" name="mascota" id="capipepo"/>
-        
-        <label for="ratigueya">Ratigueya</label>
-        <input type="radio" name="mascota" id="ratigueya"/>
-        
-        <label for="langostelvis">Langostelvis</label>
-        <input type="radio" name="mascota" id="langostelvis"/>
-        
-        <label for="tucapalma">Tucapalma</label>        
-        <input type="radio" name="mascota" id="tucapalma"/>
-        
-        <label for="pydos">Pydos</label>
-        <input type="radio" name="mascota" id="pydos"/>
-       
-        <!-- Hipodoge -> Agua
-        Capipepo -> Tierra
-        Ratigueya -> Fuego
-        Langostelvis -> Agua y Fuego
-        Tucapalma -> Agua y Tierra
-        Pydos -> Tierra y Fuego -->
-
+        <label for="hipodoge">Hipodoge</label>
+        </div>
+        <div>
+            <input type="radio" name="mascota" id="capipepo"/>
+            <label for="capipepo">Capipepo</label>
+        </div>
+        <div>
+            <input type="radio" name="mascota" id="ratigueya"/>
+            <label for="ratigueya">Ratigueya</label>
+        </div>
+        <div>
+            <input type="radio" name="mascota" id="langostelvis"/>
+            <label for="langostelvis">Langostelvis</label>
+        </div>
+        <div>
+            <input type="radio" name="mascota" id="tucapalma"/>
+            <label for="tucapalma">Tucapalma</label>
+        </div>
+        <div>
+            <input type="radio" name="mascota" id="pydos"/>
+            <label for="pydos">Pydos</label>
+        </div>
+        <br>
         <button id="botonSelecionarMascota">Seleccionar</button>
-
     </section>
 
     <section id="seleccionarAtaque">
         <h2>Elige tu ataque:</h2>
-        <p>Tu mascota <span id="nombreMascotaJugador"></span> tiene <span>3</span> vidas</p>
-        <p>La mascota <span id="nombreMascotaEnemigo"></span> del enemigo tiene <span>3</span> vidas</p>
+        <p>Tu mascota <strong><span id="nombreMascotaJugador"></span></strong> tiene <span>3</span> vidas</p>
+        <p>La mascota <strong><span id="nombreMascotaEnemigo"></span></strong> del enemigo tiene <span>3</span> vidas</p>
         <p>
             <button id="ataqueFuego">Fuego</button>
             <button id="ataqueAgua">Agua</button>
@@ -63,5 +63,17 @@
         <button id="reiniciarJuego">Reiniciar</button>
     </section>
 
+    <footer>
+        <center><strong>Copy Rigth Harby García</strong></center>
+    </footer>
 </body>
 </html>
+
+
+       
+        <!-- Hipodoge -> Agua
+        Capipepo -> Tierra
+        Ratigueya -> Fuego
+        Langostelvis -> Agua y Fuego
+        Tucapalma -> Agua y Tierra
+        Pydos -> Tierra y Fuego -->
